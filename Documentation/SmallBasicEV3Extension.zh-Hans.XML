@@ -6,31 +6,34 @@
     <members>
         <member name="T:SmallBasicEV3Extension.Assert">
             <summary>
-            A test facility to help check part of the code for correctness. 
+            A test facility to help check part of the code for correctness. 一个用于检查代码的程序，
             Assertions make implicit assumptions about the current program state explicit. By adding assertion calls you can find bugs in your program more easily. For example, when a part of the program depends on the variable A having a positive value, you could call  Assert.Greater(A,0,"A must be > 0!"). 
             In the case that the program runs into an assertion that is not satisfied, the error message is displayed stating the problem.
             </summary>
         </member>
         <member name="M:SmallBasicEV3Extension.Assert.Failed(Microsoft.SmallBasic.Library.Primitive)">
             <summary>
+            输出一个错误信息至显示区。这个功能只应在已经存在错误代码时使用
             Write a failure message to the display. This function should only be called if something has already failed in the program. 
             </summary>
-            <param name="message">Message to be displayed</param>
+            <param name="message">Message to be displayed 将被显示的信息</param>
         </member>
         <member name="M:SmallBasicEV3Extension.Assert.Equal(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
             <summary>
             Make sure that two values are equal. For this test, even "True" and "tRue" are not considered equal.
+            确保两个值是相同的。对于这项判定，'True' 和 'tRue' 并不相同。
             </summary>
-            <param name="a">First value</param>
-            <param name="b">Second value</param>
+            <param name="a">First value 第一个值</param>
+            <param name="b">Second value第二个值</param>
             <param name="message">Message that will be displayed if the assertion fails</param>
         </member>
         <member name="M:SmallBasicEV3Extension.Assert.NotEqual(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
             <summary>
+            确保两个值是不同的。对于这项判定，'True' 和 'tRue' 并不相同。
             Make sure that two values are not equal. For this test, even "True" and "tRue" are not considered equal.
             </summary>
-            <param name="a">First value</param>
-            <param name="b">Second value</param>
+            <param name="a">First value第一个值</param>
+            <param name="b">Second value第二个值</param>
             <param name="message">Message that will be displayed if the assertion fails</param>
         </member>
         <member name="M:SmallBasicEV3Extension.Assert.Less(Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive,Microsoft.SmallBasic.Library.Primitive)">
